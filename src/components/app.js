@@ -78,7 +78,7 @@ async function fetchUser(username) {
   const response = await window.fetch(`${apiUrl}/${username}`);
   const data = await response.json();
   if (response.ok) {
-    if (data?.name) {
+    if (data?.login) {
       return data;
     } else {
       const error = new Error(`No results found for "${username}"`);
